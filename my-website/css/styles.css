@@ -1,12 +1,6 @@
-/* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Basis+Grotesque+Pro:wght@400;700&display=swap');
 
 /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     max-width: 1440px;
@@ -16,29 +10,30 @@ body {
 
 /* Header styles */
 .header {
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    margin: 0 20px;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #0002;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title h1 {
     font-family: 'GTF Chapter', serif; /* Logo font */
-    font-size: 24px;
+    font-size: 36px;
     font-weight: normal;
-    margin-bottom: 20px;
+    text-align: left;
     text-transform: uppercase;
 }
 
 .nav {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 .nav-list {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     list-style: none;
-    gap: 48px;
+    gap: 36px;
 }
 
 .nav-list a {
@@ -47,139 +42,118 @@ body {
     color: #000;
     font-size: 14px;
     letter-spacing: 2px;
+    position: relative;
 }
 
-/* Main article styles */
-.main-article {
-    text-align: center;
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
-.article-image {
+.nav-list a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -58px;
+    left: 0;
     width: 100%;
-    height: auto;
-    margin: 40px 0;
+    height: 3px;
+    background-color: black;
 }
 
-.article-title h1 {
-    font-family: 'Mackay Bold', serif;
-    font-size: 46px;
-    line-height: 1.2;
-    margin: 32px auto;
-    max-width: 680px;
-}
 
-.article-subtitle h2 {
-    font-family: 'Basis Grotesque Pro', sans-serif;
-    font-size: 24px;
-    color: #000;
-    margin: 24px auto;
-    max-width: 600px;
-    font-weight: normal;
-}
 
-/* Featured image container */
-#main-article-image {
-    background-color: #FFE600;
-    padding: 60px;
-    margin: 40px auto;
-    max-width: 840px;
-}
 
-/* Article grid styles */
-.article {
-    max-width: 840px;
+main {
+    max-width: 1200px;
     margin: 60px auto;
-    text-align: center;
-    padding: 0 20px;
+    padding: 10px 20px;
+    /*outline: 2px dashed red;*/
+}
+
+main *{
+    /*outline: 2px dashed blue;*/
+}
+
+
+#separator {
+    width: 60%;
+    height: 2px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+    margin: 40px auto;
+    align-items: center;
+    align-self: center;
+}
+
+
+/* Artículo principal */
+#main-article {
+    margin-bottom: 40px; /* Espacio debajo del artículo principal */
+    text-align: center; /* Centrado de texto */
+}
+
+#main-article-image img {
+    width: 50%; /* Imagen ocupa el ancho completo */
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+
+
+#main-article-title h1 {
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    width:50%;
+    margin: 10px auto;
+    font-size: 36px;
+}
+
+#main-article-subtitle h2 {
+    width: 40%;
+    font-family: "Courier New", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 10px auto;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #666;
+}
+
+.article-grid{
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 10px;
+    align-items: center;
+    outline: 2px dashed green;
+    margin: 20px auto;
+    grid-auto-rows: 300px;
+    gap: 50px 10px;
+
+}
+
+.article-grid *{
+    outline: 2px dashed green;
+}
+
+
+
+
+
+
+/* Estilos de los artículos secundarios */
+.article {
+    text-align: center; /* Centrar texto e imágenes */
 }
 
 .article img {
     width: 100%;
-    height: auto;
-    margin-bottom: 24px;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Imagen ajustada sin distorsión */
+    margin-bottom: 10px;
 }
 
-.article h1 {
-    font-family: 'Mackay Bold', serif;
-    font-size: 28px;
-    line-height: 1.3;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Newsletter section */
-.newsletter-section {
-    text-align: center;
-    padding: 60px 20px;
-    margin: 80px 0;
-    background-color: #F9F9F9;
-}
-
-.newsletter-section h2 {
-    font-family: 'Mackay Bold', serif;
-    font-size: 32px;
-    margin-bottom: 16px;
-}
-
-.newsletter-section p {
-    font-family: 'Basis Grotesque Pro', sans-serif;
+.article-title h1 {
     font-size: 16px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.newsletter-form {
-    max-width: 400px;
-    margin: 32px auto 0;
-    display: flex;
-    gap: 12px;
-}
-
-.newsletter-input {
-    flex: 1;
-    padding: 12px 16px;
-    border: 1px solid #000;
-    font-family: 'Basis Grotesque Pro', sans-serif;
-}
-
-.btn {
-    padding: 12px 24px;
-    background: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-family: 'Basis Grotesque Pro', sans-serif;
-    letter-spacing: 1px;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid #000;
-}
-
-.logo {
-    font-family: 'GTF Chapter', serif;
-    font-size: 24px;
-    margin-bottom: 16px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .article-title h1 {
-        font-size: 32px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
+    font-weight: normal;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 30px;
 }
