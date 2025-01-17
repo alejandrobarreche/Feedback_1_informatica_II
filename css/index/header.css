@@ -1,0 +1,69 @@
+
+body {
+    width:100%;
+    margin: 0;
+    font-family: 'Harriet Text', serif;
+}
+
+
+/* Botón hamburguesa */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+    border-radius: 3px;
+}
+
+
+/* Header styles */
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #0002;
+}
+
+.title h1 {
+    font-family: 'GTF Chapter', serif;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-list a {
+    font-family: 'Basis Grotesque Pro', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.nav-list a.active::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    bottom: -58px;
+    left: 0;
+    width: 100%;
+}

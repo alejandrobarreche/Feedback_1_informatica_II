@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    #main-article-image img {
+        margin-top: -40px;
+        width: 100%;
+    }
+
+    #main-article-title h1 {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    #main-article-subtitle h2 {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    .separator {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .all-articles h1 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .article-grid {
+        width: 60%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-main p {
+        width: 90%;
+    }
+
+    .footer-bottom {
+        width: 90%;
+    }
+}

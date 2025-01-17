@@ -1,0 +1,113 @@
+/* Separator */
+#long-separator{
+    width:100%
+}
+
+/* Eyes Image Section */
+.eyes-image {
+    text-align: center;
+    margin: -10px auto 30px auto;
+}
+
+.eyes-image img {
+    width: 50px;
+    height: auto;
+}
+
+/* Read Next Section */
+.read-next {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.read-next h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* More Articles Section */
+.more-articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Ajuste automático para columnas */
+    gap: 20px; /* Espacio entre artículos */
+    margin: 20px auto 40px auto;
+    width: 80%;
+}
+
+.article {
+    text-align: center;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.article-title h1 {
+    font-family: "Arial", serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+    margin: 5px 15px auto 15px;
+}
+
+
+.newsletter {
+    width: 50%;
+    margin: 40px auto; /* Centrado con espacio superior e inferior */
+    border: 1px solid black; /* Borde del contenedor */
+    overflow: hidden; /* Oculta contenido desbordado (línea negra) */
+}
+
+.newsletter-header {
+    height: 5px; /* Línea negra superior */
+    background-color: #000;
+}
+
+.newsletter-content {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 10px; /* Espaciado inferior */
+    color: #000;
+}
+
+.newsletter-content p {
+    width: 80%;
+    margin: 20px auto 20px auto;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Form */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    width: 50%;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000; /* Fondo negro */
+    border: none;
+}
